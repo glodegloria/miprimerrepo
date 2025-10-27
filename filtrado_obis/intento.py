@@ -229,6 +229,7 @@ for K in range(len(n_areas)):
             y_estim = power_law(area.ravel(), *params)
             y_pred = power_law(np.arange(0,np.max(area),50), *params)
             rmse = np.sqrt(mean_squared_error(num_generos.ravel(), y_estim))
+            print("Interpolada correctamente")
         except RuntimeError:
             continue  # Si no converge el ajuste, pasa al siguiente modelo
 
